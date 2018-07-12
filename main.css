@@ -1,0 +1,136 @@
+html,body{
+    padding:0;
+    margin:0;
+    height:100%;
+
+    font-family: 'Roboto Condensed', sans-serif;
+
+
+    width:100%;
+}
+.navbar{
+    display:flex;
+    background-color: #232931;
+    flex-direction: row;
+    border-radius: 0%;
+    text-align: center;
+}
+#page{
+    margin:auto;
+    color: #eeee;
+    font-size: 1.2em;
+    transition: all .2s;
+    padding:1%;
+}
+.navbar:hover{
+    background-color: #393e46;
+}
+#logo{
+    width:100px;
+    height:100px;
+    padding: 1%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("NORKEE.png");
+
+}
+#caraousel{
+  width: 100%;
+  height: 80%;
+  font-size:2em;
+  display: flex;
+  flex-direction: column;
+  line-height: initial;
+  vertical-align: middle;
+  font-style:bold;
+  justify-content: center;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+    color:#eeee;
+}
+#caraousel div{
+    height: 15%;
+}
+#about{
+    display: flex;
+    
+    padding:5%;
+}
+#image_about{
+    background-image:url("cara_2.JPG");
+    width: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+#about_content{
+    font-size: 1.2em;
+    width:75%;
+}
+
+
+@media only screen and (max-width: 700px) {
+    #about_content{
+        width:100%;
+        font-size: 1em;
+    }
+    #image_about{
+        display: none;
+    }
+
+}
+#images{
+    display: flex;
+    height:100%;
+}
+
+.img{
+    transition:all .2s ease-in-out;
+}
+.img:hover{
+    width:50%;
+}
+#im1{
+    background-image:url("row_ke/1.jpg");
+    width: 20%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#im2{
+    background-image:url("row_ke/2.jpg");
+    width: 20%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#im3{
+    background-image:url("row_ke/3.jpg");
+    width: 20%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+#im4{
+    background-image:url("row_ke/4.jpg");
+    width: 20%;
+
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+#im5{
+    background-image:url("row_ke/5.jpg");
+    width: 20%;
+
+    background-position: center;
+    background-size: cover;
+
+}
