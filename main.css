@@ -39,6 +39,7 @@ html,body{
   height: 80%;
   font-size:2em;
   display: flex;
+  
   flex-direction: column;
   line-height: initial;
   vertical-align: middle;
@@ -88,7 +89,23 @@ html,body{
 .img{
     transition:all .2s ease-in-out;
 }
-.img:hover{
+#im1:hover{
+    width:50%;
+}
+
+#im2:hover{
+    width:50%;
+}
+
+#im3:hover{
+    width:50%;
+}
+
+#im4:hover{
+    width:50%;
+}
+
+#im5:hover{
     width:50%;
 }
 #im1{
@@ -134,3 +151,64 @@ html,body{
     background-size: cover;
 
 }
+/*Pricing*/
+* {
+    box-sizing: border-box;
+}
+#pricing{
+    display: flex;
+}
+.columns {
+    float: right;
+    
+    width: 30%;
+    padding: 8px;
+    
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+/*/pricing*/
