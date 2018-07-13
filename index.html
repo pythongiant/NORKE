@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+crossorigin=""></script>
+  <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>NORKEE-CCI, Highway to Buisness Success</title>
@@ -14,11 +24,18 @@
         
         });
 
+        window.onscroll = function() {
+          console.log(document.body.scrollTop)
+        if (document.documentElement.scrollTop > 20 ) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+      } 
     </script>
 </head>
 <body>
-    <center><div id="logo"></div></center>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
     <div id="page">Home</div>  
     <div id="page">Vision</div>  
     <div id="page">Collaboration</div>  
@@ -39,6 +56,7 @@
    <div id = "image_about">
 
    </div>
+
 </div>
 <div id="images">
     <div class="img" id="im1"></div>
@@ -97,5 +115,28 @@
     </ul>
   </div>
 </div>
+
+<div id="mapid" class="map" style=" height: 50%;width:100%"></div>
+<div class="map" style="padding:10px;display:block;margin:auto;width:50%;">
+  <h1>Contact Us</h1>
+  <p><span style="font-weight: bold">Address:</span> Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001</p> 
+  <p><span style="font-weight: bold">Phone:</span> 800077865</p> 
+  <div id="email"><i class="fa fa-envelope" aria-hidden="true"></i> Email Us</div>
+</div>
+
+<script>
+
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYXJjc2FiZXIiLCJhIjoiY2pqanhuZnN6M2FhZTNxbnYxaG4wYzJyOCJ9.rcRt1Po5eeDoCiQwSHK3RQ', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox.streets'
+    }).addTo(mymap);
+</script>
+
+
 </body>
 </html>
