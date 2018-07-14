@@ -36,9 +36,10 @@ crossorigin=""></script>
 </head>
 <body>
     <div class="navbar" id="navbar">
-    <div id="page">Home</div>  
-    <div id="page">Vision</div>  
-    <div id="page">Collaboration</div>  
+    <div id="page" onclick="    $('html, body').animate({   scrollTop: $('#caraousel').offset().top }, 1000);">Home</div>  
+    <div id="page" onclick="    $('html, body').animate({   scrollTop: $('#about').offset().top }, 1000);">About</div>  
+    <div id="page" onclick="    $('html, body').animate({   scrollTop: $('.columns').offset().top }, 1000);">Pricing</div>  
+    <div id="page" onclick="    $('html, body').animate({   scrollTop: $('.map').offset().top }, 1000);">Contact Us</div>  
     </div> 
 
     <div id ="caraousel">
@@ -121,7 +122,8 @@ crossorigin=""></script>
   <h1>Contact Us</h1>
   <p><span style="font-weight: bold">Address:</span> Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001</p> 
   <p><span style="font-weight: bold">Phone:</span> 800077865</p> 
-  <div id="email"><i class="fa fa-envelope" aria-hidden="true"></i> Email Us</div>
+  
+  <div id="email"><a href="mailto:srihari.unnikrishnan@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email Us</a></div>
 </div>
 
 <script>

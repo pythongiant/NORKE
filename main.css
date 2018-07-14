@@ -21,11 +21,12 @@ html,body{
     font-size: 1.2em;
     transition: all .2s;
     padding:1%;
-    width:33%;
+    width:25%;
     text-align: center;
 }
-.navbar:hover{
+#page:hover{
     background-color: #393e46;
+    cursor: pointer;
 }
 #caraousel{
   width: 100%;
@@ -199,4 +200,8 @@ html,body{
     color:white;
     border-radius: 5%;
     padding:2%;
+}
+a{
+    color:white;
+    text-decoration: none;
 }
